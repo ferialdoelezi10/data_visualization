@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Data Visualization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>CO2 Data Visualization</h1>
+    </header>
+    <main>
+        <!-- Section for the 3D Earth Visualization -->
+        <section>
+            <h2>3D Earth Visualization: CO₂ Concentrations</h2>
+            <p>Explore global CO₂ concentration patterns with an interactive 3D model.</p>
+            <div id="earth-chart">
+                {{ globe_graph_html|safe }}
+            </div>
+        </section>
+
+        <!-- Section for the Line Chart -->
+        <section>
+            <h2>Line Chart: CO₂ Concentrations Over Time</h2>
+            <p>This chart shows the average carbon dioxide (CO₂) levels in the atmosphere from 1959 to 2023.</p>
+            <div id="line-chart">
+                {{ line_graph_html|safe }}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 CO2 Data Visualization</p>
+    </footer>
+</body>
+</html>
